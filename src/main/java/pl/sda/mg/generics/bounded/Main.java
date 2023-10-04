@@ -18,12 +18,12 @@ public class Main {
 //        printValuesWithSuper(doubles); //blad kompilacji
     }
 
-    private static void printValuesWithExtend(List<? extends Number> list) {
+    private static void printValuesWithExtend(List<? extends Number> list) { //przyjmujemy wszystkie typy pochodzace od Number
         for (Number number : list) {
             System.out.println(number);
         }
     }
-    private static void printValuesWithSuper(List<? super Integer> list) {
+    private static void printValuesWithSuper(List<? super Integer> list) {// przyjmujemy wszystkie typy, które są powyżej Integer
         for (Object o : list) {
             System.out.println(o);
         }
