@@ -27,8 +27,6 @@ public class App {
         car4.setFuelType(FuelType.LPG);
         car4.setPrice(52_000);
 
-        car4.toString()
-
 
         Car[] cars = new Car[4];
 
