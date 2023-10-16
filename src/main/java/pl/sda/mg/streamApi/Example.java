@@ -12,7 +12,8 @@ public class Example {
                 Arrays.asList(10, 20, 30, 40, 50, 60, 70, 80, 90)
                 );
 
-        listOfIntegersList.stream().forEach(i -> System.out.println(i));
+        listOfIntegersList.stream()
+                .forEach(i -> System.out.println(i));
 
         System.out.println("****************");
 
@@ -34,6 +35,24 @@ public class Example {
         integers.stream()
                 .filter(i -> i > 50)
                 .forEach(i -> System.out.println(i));
+
+
+        System.out.println("****************");
+        boolean anyMatch = integers.stream()
+                .anyMatch(integer -> Integer.valueOf(1).equals(integer));
+        System.out.println("Any match?: " + anyMatch);
+
+        System.out.println("****************");
+        boolean allMatch = integers.stream()
+                .allMatch(i -> i > 50);
+        System.out.println("All match?: " + allMatch);
+
+        System.out.println("****************");
+        listOfIntegersList.stream()
+                .allMatch(list -> list.size() == 10);
+        System.out.println("All match?: " + allMatch);
+
+
 
 
     }
