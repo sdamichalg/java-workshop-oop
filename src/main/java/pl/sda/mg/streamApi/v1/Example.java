@@ -1,4 +1,4 @@
-package pl.sda.mg.streamApi;
+package pl.sda.mg.streamApi.v1;
 
 import java.util.Arrays;
 import java.util.List;
