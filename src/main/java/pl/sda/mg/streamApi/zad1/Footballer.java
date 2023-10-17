@@ -15,4 +15,5 @@ public class Footballer {
     private MarketStatus marketStatus;
     private Address address;
     private List<Club> previousClubs;
+
 }
