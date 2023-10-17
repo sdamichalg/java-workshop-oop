@@ -41,5 +41,17 @@ public class App {
         System.out.println("****************");
         System.out.println("Liczba unikalnych klubów: " + listClubsV3.size());
         System.out.println(listClubsV3);
+
+        //        zwróć nazwy wszystkich klubów jako unikalne (bez powtórzeń) opcja 1
+
+        List<Footballer> listOfFootballers = repository.findAll();
+        Set<String> setClubs = listOfFootballers.stream() //stream <Footballer>
+                .flatMap(footballer -> footballer.getPreviousClubs().stream()) //stream<Club>
+                .map(club -> club.getClubName()) //stream<String>
+                .collect(Collectors.toSet());
+
+        System.out.println(setClubs.size());
+        System.out.println(setClubs);
+
     }
 }
