@@ -178,10 +178,10 @@ public class FootballDatabase implements FootballRepository{
 
     @Override
     public List<Footballer> findFootballersByClub(String clubName) {
-
-        return footballers.stream()
-                .filter(ftb -> ftb.getPreviousClubs()
-                        .stream().anyMatch(club -> club.getClubName().equalsIgnoreCase(clubName)))
+        return footballers.stream() //stream footballers
+                .filter(footballer -> footballer.getPreviousClubs()
+                        .stream() //stream clubow
+                        .anyMatch(club -> club.getClubName().equalsIgnoreCase(clubName)))
                 .collect(Collectors.toList());
     }
 
