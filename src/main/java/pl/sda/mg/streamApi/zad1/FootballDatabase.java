@@ -2,10 +2,11 @@ package pl.sda.mg.streamApi.zad1;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class FootballDatabase implements FootballRepository{
 
-    public static List<Footballer> footballers;
+    private static List<Footballer> footballers;
 
     static {
         //generuje pilkarzy
@@ -177,11 +178,15 @@ public class FootballDatabase implements FootballRepository{
 
     @Override
     public List<Footballer> findFootballersByClub(String clubName) {
-        return null;
+
+        return footballers.stream()
+                .filter(ftb -> ftb.getPreviousClubs()
+                        .stream().anyMatch(club -> club.getClubName().equalsIgnoreCase(clubName)))
+                .collect(Collectors.toList());
     }
 
     @Override
     public List<Footballer> findAll() {
-        return null;
+        return footballers;
     }
 }
