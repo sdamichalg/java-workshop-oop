@@ -1,5 +1,8 @@
 package pl.sda.mg.streamApi.zad1;
 
+import lombok.Builder;
+
+@Builder
 public class Address {
     private String street;
     private String city;
