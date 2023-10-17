@@ -2,11 +2,31 @@ package pl.sda.mg.streamApi.v2;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.OptionalDouble;
+import java.util.stream.Collectors;
 
 public class App {
     public static void main(String[] args) {
 
         List<Car> cars = getCars();
+
+        System.out.println(cars.stream().count());
+        cars.size();
+
+        List<String> strings = cars.stream()
+                .map(c -> c.getBrand())
+//                .map(Car::getBrand)
+                .collect(Collectors.toList());
+
+        System.out.println(strings);
+
+        OptionalDouble average = cars.stream()
+                .map(c -> Integer.valueOf(c.getProductionYear()))
+                .mapToInt(Integer::intValue)
+                .average();
+
+        average.ifPresent(avr -> System.out.println("Średni czas produkcji aut: " + avr));
+
     }
 
     private static List<Car> getCars() {
