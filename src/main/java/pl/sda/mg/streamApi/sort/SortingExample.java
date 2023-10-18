@@ -29,5 +29,13 @@ public class SortingExample {
         footballers.stream()
                 .sorted(Comparator.comparing(Footballer::getBirthYear))
                 .forEach(ftb -> System.out.println(ftb));
+
+        footballers.stream()
+                .sorted(Comparator.comparing(Footballer::getFirstName)
+                        .thenComparing(Footballer::getBirthYear))
+                .forEach(ftb -> System.out.println(ftb));
+
+
+
     }
 }
