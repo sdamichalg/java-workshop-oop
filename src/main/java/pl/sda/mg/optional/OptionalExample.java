@@ -16,6 +16,7 @@ public class OptionalExample {
     private static void printMovieDetails(Movie movie) {
         Optional<Movie> movieContainer = Optional.ofNullable(movie);
 
+
         if (movieContainer.isPresent()) {
             System.out.println(movieContainer.get().getTitle());
         }
