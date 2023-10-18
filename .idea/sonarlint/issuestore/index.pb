@@ -1,7 +1,4 @@
 
-:
-
-.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
 a
 1src/main/java/pl/sda/mg/oop/abstractclaz/App.java,f/2/f2618e7208377f539e67c5638354857c4a0b944b
 a
@@ -86,3 +83,19 @@ j
 -src/main/java/pl/sda/mg/lamdba/Presenter.java,c/e/ce6fb3abdd2fdde438580b35eae1490568501e04
 a
 1src/main/java/pl/sda/mg/lamdba/PresenterImpl.java,f/9/f9f339af954aad75360915bc215c19571b026c9c
+a
+1src/main/java/pl/sda/mg/lamdba/FunctionalApp.java,e/2/e2fac3da5db0a4763b57bbc6c4cee6d289665b29
+b
+2src/main/java/pl/sda/mg/streamApi/v2/FuelType.java,d/e/de1c96da3d49b5123327f919e86db390fce6af86
+j
+:src/main/java/pl/sda/mg/lamdba/zadCallback/MyCallback.java,7/5/75458577fed2e8900ad1919c7da5849f21a38f9c
+g
+7src/main/java/pl/sda/mg/lamdba/zadCallback/Service.java,c/8/c8f8313be4d435ab133882cccbaded2ea68fb701
+d
+4src/main/java/pl/sda/mg/lamdba/zadCallback/Main.java,5/9/598fa76cabf0b51060c35166ccd8071b98a6f504
+]
+-src/main/java/pl/sda/mg/streamApi/v2/Car.java,6/0/60183f5333948e9e31de2af2148dbf6141dca5f7
+]
+-src/main/java/pl/sda/mg/streamApi/v2/App.java,1/f/1f0bd22cacd3abbfc2859f3dbed7334b5901434e
+c
+3src/main/java/pl/sda/mg/streamApi/zad1/Country.java,0/3/0300c3f115d69cc51032b4ddb911d9b36cc35faf
