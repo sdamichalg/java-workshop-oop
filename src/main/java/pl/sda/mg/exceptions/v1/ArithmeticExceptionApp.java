@@ -1,4 +1,4 @@
-package pl.sda.mg.exceptions;
+package pl.sda.mg.exceptions.v1;
 
 public class ArithmeticExceptionApp {
     public static void main(String[] args) {
