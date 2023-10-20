@@ -7,8 +7,10 @@ public class App {
     public static void main(String[] args) {
         EmployeeService employeeService = new EmployeeService();
 
-        employeeService.printEmployeeDetails(getEmployees(), 6); // obsługa wyjątku
+//        employeeService.printEmployeeDetails(getEmployees(), 6); // obsługa wyjątku
         employeeService.calculateRetirementYear(getEmployees()); //obsługa wyjątku
+        employeeService.calculateRetirementYear2(getEmployees()); //obsługa wyjątku
+
 
     }
 
