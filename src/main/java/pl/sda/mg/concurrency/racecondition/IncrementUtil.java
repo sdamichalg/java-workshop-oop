@@ -6,7 +6,10 @@ import lombok.Getter;
 public class IncrementUtil {
     private int counter;
 
+//    public synchronized void increment() {
     public void increment() {
-        counter += 1;
+        synchronized (this) {
+            counter += 1;
+        }
     }
 }
