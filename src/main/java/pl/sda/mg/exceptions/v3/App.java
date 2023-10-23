@@ -8,8 +8,10 @@ public class App {
         EmployeeService employeeService = new EmployeeService();
 
 //        employeeService.printEmployeeDetails(getEmployees(), 6); // obsługa wyjątku
-        employeeService.calculateRetirementYear(getEmployees()); //obsługa wyjątku
-        employeeService.calculateRetirementYear2(getEmployees()); //obsługa wyjątku
+//        employeeService.calculateRetirementYear(getEmployees()); //obsługa wyjątku
+//        employeeService.calculateRetirementYear2(getEmployees()); //obsługa wyjątku
+
+        employeeService.fetchEmployeeByLastName(getEmployees(), "Mickiewicz");
 
 
     }
@@ -39,7 +41,7 @@ public class App {
         employees.add(employee1);
         employees.add(employee2);
         employees.add(employee3);
-        employees.add(null);
+//        employees.add(null);
 
         return employees;
     }

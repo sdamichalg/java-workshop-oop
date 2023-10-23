@@ -18,11 +18,12 @@ public class EmployeeService {
                 .collect(Collectors.toList());
 
         if (employees.isEmpty()) {
-            throw new RuntimeException("Brak pracownika o nazwisku: " + lastName);
+//            throw new RuntimeException("Brak pracownika o nazwisku: " + lastName);
+            throw new NoSuchEmployeeException("Brak pracownika o nazwisku: " + lastName);
         }
         return employees;
 
-        }
+    }
 
     public void calculateRetirementYear(List<Employee> employeeList) {
         LocalDate currentDate = LocalDate.now();
@@ -45,23 +46,23 @@ public class EmployeeService {
                 });
     }
 
-        public void calculateRetirementYear2(List<Employee> employeeList) {
-            LocalDate currentDate = LocalDate.now();
+    public void calculateRetirementYear2(List<Employee> employeeList) {
+        LocalDate currentDate = LocalDate.now();
 
-            try {
-                employeeList.stream()
-                        .forEach(employee -> {
+        try {
+            employeeList.stream()
+                    .forEach(employee -> {
 
-                            int retirementAge = ("W".equalsIgnoreCase(employee.getSex())) ? 60 : 65;
-                            int retirementYear = currentDate.getYear() - employee.getAge() + retirementAge;
+                        int retirementAge = ("W".equalsIgnoreCase(employee.getSex())) ? 60 : 65;
+                        int retirementYear = currentDate.getYear() - employee.getAge() + retirementAge;
 
-                            System.out.printf("Rok przejścia na emeryturę dla pracownika %s %s to rok: %d\n",
-                                    employee.getFirstName(), employee.getLastName(), retirementYear);
+                        System.out.printf("Rok przejścia na emeryturę dla pracownika %s %s to rok: %d\n",
+                                employee.getFirstName(), employee.getLastName(), retirementYear);
 
-                        });
-            } catch (NullPointerException ex) {
-                System.out.println("NPE: brak danych");
-            }
+                    });
+        } catch (NullPointerException ex) {
+            System.out.println("NPE: brak danych");
         }
     }
+}
 
