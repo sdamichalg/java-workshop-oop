@@ -44,5 +44,8 @@ public class AtomicApp {
         for (Future<Integer> result : futures) {
             System.out.println(result.get());
         }
+
+        executorService.shutdown();
     }
+
 }
